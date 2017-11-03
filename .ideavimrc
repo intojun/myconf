@@ -1,0 +1,15 @@
+"inoremap <ESC> <ESC>:set imdisable<CR>
+"nnoremap i :set noimd<CR>i
+"nnoremap I :set noimd<CR>I
+"nnoremap a :set noimd<CR>a
+"nnoremap A :set noimd<CR>A
+"nnoremap o :set noimd<CR>o
+"nnoremap O :set noimd<CR>O
+
+" leader
+let mapleader=","
+
+set ignorecase “대소문자 구분없이 찾기
+set clipboard=unnamed " 시스템 클립보드 사용
+
+nmap 'p "0p
