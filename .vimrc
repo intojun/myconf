@@ -7,6 +7,9 @@ call vundle#begin()
 " javascript 문법 하이라이팅 
 Plugin 'jelera/vim-javascript-syntax'
 
+" typescript 문법
+Plugin 'leafgarland/typescript-vim'
+
 " javascript 인덴트 
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -21,6 +24,9 @@ Plugin 'bkad/camelcasemotion'
 " NERDTree
 Plugin 'scrooloose/nerdtree'
 
+" NERDTree commenter
+Plugin 'scrooloose/nerdcommenter'
+
 " 상태바
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -34,11 +40,25 @@ Plugin 'scrooloose/syntastic'
 
 " find file
 Plugin 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|public$\|log$\|tmp$\|vendor$',
-  \ 'file': '\v\.(exe|so|dll)$'
-\ }
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+" Close NERDTree window
+let g:ctrlp_dont_split = 'NERD'
 
+" reactjs syntax
+Plugin 'mxw/vim-jsx'
+
+" emmet
+Plugin 'mattn/emmet-vim'
+
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+\  }
+
+" Autoformatting
+Plugin 'skywind3000/asyncrun.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -73,4 +93,4 @@ colorscheme solarized
 nmap 'p "0p
 
 " NERDTree 토글
-map <Leader>nt <ESC>:NERDTree<CR>
+map <Leader>n <ESC>:NERDTree<CR>
