@@ -46,6 +46,7 @@ let g:ctrlp_dont_split = 'NERD'
 
 " reactjs syntax
 Plugin 'mxw/vim-jsx'
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " emmet
 Plugin 'mattn/emmet-vim'
@@ -53,12 +54,16 @@ Plugin 'mattn/emmet-vim'
 let g:user_emmet_leader_key='<Tab>'
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {
-    \      'extends' : 'jsx',
+    \      'extends' : 'js',
     \  },
 \  }
 
 " Autoformatting
 Plugin 'skywind3000/asyncrun.vim'
+
+" auto completion
+Plugin 'raimondi/delimitmate'
+Plugin 'valloric/youcompleteme'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -78,6 +83,7 @@ set expandtab "tab을 space로 변환
 
 set cindent 	" C언어스타일 자동 들여쓰기
 set autoindent	" 자동 들여쓰기
+set smartindent "똑똑한 들여쓰기?
 
 set number		" 라인 표시
 set showcmd		" 상태바에 커맨드 표시 
