@@ -38,16 +38,6 @@ Plugin 'tpope/vim-fugitive'
 " syntax check 
 Plugin 'scrooloose/syntastic'
 
-" find file
-Plugin 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
-" Close NERDTree window
-let g:ctrlp_dont_split = 'NERD'
-
-" reactjs syntax
-Plugin 'mxw/vim-jsx'
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
-
 " emmet
 Plugin 'mattn/emmet-vim'
 
@@ -62,8 +52,25 @@ let g:user_emmet_settings = {
 Plugin 'skywind3000/asyncrun.vim'
 
 " auto completion
-Plugin 'raimondi/delimitmate'
-Plugin 'valloric/youcompleteme'
+Plugin 'Shougo/deoplete.nvim'
+
+" Deoplete.
+let g:deoplete#enable_at_startup = 1
+
+"JAVASCRIPT
+Plugin 'ternjs/tern_for_vim' 
+Plugin 'carlitux/deoplete-ternjs'
+
+" reactjs syntax
+Plugin 'mxw/vim-jsx'
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+" find file
+Plugin 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+" Close NERDTree window
+let g:ctrlp_dont_split = 'NERD'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
