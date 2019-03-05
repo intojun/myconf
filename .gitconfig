@@ -1,0 +1,54 @@
+[core]
+	excludesfile = /Users/Naver/.gitignore_global
+	editor = vim
+	autocrlf = input
+#[difftool "sourcetree"]
+#	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+#	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lf = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --numstat
+	a = add
+	s = status
+	c = commit
+	co = checkout
+	back = checkout '@{-1}'
+  pop = stash pop 'stash@{0}'
+	pr = pull --rebase 
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+	# Be able to abort all diffs with `:cq` or `:cquit`
+	trustExitCode = true
+[user]
+	name = j.h.lee
+	email = jundol.lee@navercorp.com
+[difftool "sourcetree"]
+	cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$LOCAL\" \"$REMOTE\"
+	path = 
+[commit]
+	template = /Users/Naver/.stCommitMsg
+[mergetool]
+	keepBackup = false
